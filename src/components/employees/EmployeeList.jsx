@@ -1,5 +1,5 @@
 
-import { Employee, getInitials } from "@/data/employeesData";
+import { getInitials, employees } from "@/data/employeesData";
 import { 
   MoreHorizontal 
 } from "lucide-react";
@@ -24,8 +24,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 /**
  * @typedef {Object} EmployeeListProps
- * @property {Array} employees - List of employees
- * @property {Function} onSelectEmployee - Callback when employee is selected
+ * @property {Array} employees - List of employees to display
+ * @property {Function} onSelectEmployee - Callback for when an employee is selected
  */
 
 /**
