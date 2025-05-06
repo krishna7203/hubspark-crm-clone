@@ -54,7 +54,7 @@ export default function Sidebar() {
           <div className="w-8 h-8 rounded-md bg-primary flex items-center justify-center text-white font-bold">
             <BarChart size={18} />
           </div>
-          {expanded && <span className="font-bold">CRM</span>}
+          {expanded && <span className="font-bold">CVK</span>}
         </div>
         <Button 
           variant="ghost" 
