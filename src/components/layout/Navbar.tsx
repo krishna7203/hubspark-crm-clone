@@ -8,7 +8,7 @@ export default function Navbar() {
     <header className="border-b bg-background">
       <div className="flex h-16 items-center px-4 md:px-6">
         <div className="flex items-center gap-2 md:w-64 lg:w-auto">
-          <h1 className="text-lg font-semibold md:block">CVK</h1>
+          <h1 className="text-lg font-semibold md:block">CRM</h1>
         </div>
         <div className="ml-auto flex items-center gap-4">
           <form className="hidden md:block">
