@@ -2,6 +2,7 @@
 import { useTheme } from "next-themes"
 import { Toaster as Sonner, toast } from "sonner"
 
+// Removed TypeScript type for props
 const Toaster = ({ ...props }) => {
   const { theme = "system" } = useTheme()
 

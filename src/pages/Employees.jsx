@@ -36,7 +36,7 @@ export default function Employees() {
         
         <EmployeeStats stats={employeeStats} />
         
-        <EmployeeSearch 
+        <EmployeeSearch
           searchTerm={searchTerm}
           onSearchChange={setSearchTerm}
           onAddClick={() => setAddEmployeeOpen(true)}
@@ -59,12 +59,12 @@ export default function Employees() {
           
           <TabsContent value="employees">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <EmployeeList 
+              <EmployeeList
                 employees={filteredEmployees} 
                 onSelectEmployee={setSelectedEmployee} 
               />
               
-              <EmployeeProfile 
+              <EmployeeProfile
                 selectedEmployee={selectedEmployee} 
                 onAddEmployee={() => setAddEmployeeOpen(true)} 
               />

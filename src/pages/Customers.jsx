@@ -18,7 +18,7 @@ export default function Customers() {
         <p className="text-muted-foreground">Manage and analyze your customer base</p>
       </div>
 
-      <CustomerToolbar 
+      <CustomerToolbar
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
       />
@@ -31,7 +31,7 @@ export default function Customers() {
               <p className="text-sm text-muted-foreground">Manage and view all customer accounts</p>
             </div>
             <div className="p-6">
-              <CustomerList 
+              <CustomerList
                 customers={customers}
                 onSelectCustomer={setSelectedCustomer}
                 searchTerm={searchTerm}

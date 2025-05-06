@@ -1,19 +1,21 @@
 
-import { ReactNode } from "react";
+import { React } from "react";
 import { cn } from "@/lib/utils";
 
-interface StatsCardProps {
-  title: string;
-  value: string | number;
-  icon: ReactNode;
-  trend?: {
-    value: number;
-    positive: boolean;
-  };
-  className?: string;
-}
+// Replace TypeScript interface with JSDoc comment
+/**
+ * @typedef {Object} StatsCardProps
+ * @property {string} title
+ * @property {string|number} value
+ * @property {React.ReactNode} icon
+ * @property {{value: number, positive: boolean}} [trend]
+ * @property {string} [className]
+ */
 
-export function StatsCard({ title, value, icon, trend, className }: StatsCardProps) {
+/**
+ * @param {StatsCardProps} props 
+ */
+export function StatsCard({ title, value, icon, trend, className }) {
   return (
     <div className={cn("stats-card", className)}>
       <div className="flex justify-between">
