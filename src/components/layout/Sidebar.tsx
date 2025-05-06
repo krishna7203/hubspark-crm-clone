@@ -51,9 +51,9 @@ export default function Sidebar() {
           expanded ? "opacity-100" : "opacity-0"
         )}>
           <div className="w-8 h-8 rounded-md bg-primary flex items-center justify-center text-white font-bold">
-            CRM
+            CVK
           </div>
-          {expanded && <span className="font-bold">CRM</span>}
+          {expanded && <span className="font-bold">CVK</span>}
         </div>
         <Button 
           variant="ghost" 
@@ -95,7 +95,7 @@ export default function Sidebar() {
           {expanded && (
             <div className="flex flex-col">
               <span className="text-sm font-semibold">Admin User</span>
-              <span className="text-xs opacity-70">admin@example.com</span>
+              <span className="text-xs opacity-70">admin@cvk.com</span>
             </div>
           )}
         </div>
