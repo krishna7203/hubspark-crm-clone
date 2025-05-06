@@ -16,13 +16,15 @@ import type { Employee } from "@/data/employeesData";
 
 export default function Employees() {
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedDepartment, setSelectedDepartment] = useState("all");
   const [selectedEmployee, setSelectedEmployee] = useState<Employee | null>(null);
   const [addEmployeeOpen, setAddEmployeeOpen] = useState(false);
 
   const filteredEmployees = employees.filter(employee =>
-    employee.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    employee.position.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    employee.department.toLowerCase().includes(searchTerm.toLowerCase())
+    (selectedDepartment === "all" || employee.department.toLowerCase() === selectedDepartment) &&
+    (employee.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+     employee.position.toLowerCase().includes(searchTerm.toLowerCase()) ||
+     employee.department.toLowerCase().includes(searchTerm.toLowerCase()))
   );
 
   return (
@@ -39,6 +41,9 @@ export default function Employees() {
           searchTerm={searchTerm}
           onSearchChange={setSearchTerm}
           onAddClick={() => setAddEmployeeOpen(true)}
+          departments={departments}
+          selectedDepartment={selectedDepartment}
+          onDepartmentChange={setSelectedDepartment}
         />
 
         <Tabs defaultValue="employees" className="space-y-4">
