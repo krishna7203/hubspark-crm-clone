@@ -12,12 +12,11 @@ import EmployeeList from "@/components/employees/EmployeeList";
 import EmployeeProfile from "@/components/employees/EmployeeProfile";
 import DepartmentList from "@/components/employees/DepartmentList";
 import AddEmployeeDialog from "@/components/employees/AddEmployeeDialog";
-import type { Employee } from "@/data/employeesData";
 
 export default function Employees() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedDepartment, setSelectedDepartment] = useState("all");
-  const [selectedEmployee, setSelectedEmployee] = useState<Employee | null>(null);
+  const [selectedEmployee, setSelectedEmployee] = useState(null);
   const [addEmployeeOpen, setAddEmployeeOpen] = useState(false);
 
   const filteredEmployees = employees.filter(employee =>

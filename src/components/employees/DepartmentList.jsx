@@ -1,15 +1,11 @@
 
-import { Department, getInitials } from "@/data/employeesData";
-import { Plus } from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { getInitials } from "@/data/employeesData";
 
-interface DepartmentListProps {
-  departments: Department[];
-}
-
-export default function DepartmentList({ departments }: DepartmentListProps) {
+export default function DepartmentList({ departments }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {departments.map((dept, i) => (

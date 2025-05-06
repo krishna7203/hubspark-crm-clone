@@ -1,5 +1,4 @@
 
-import { Department } from "@/data/employeesData";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { 
@@ -10,17 +9,11 @@ import {
   DialogTitle
 } from "@/components/ui/dialog";
 
-interface AddEmployeeDialogProps {
-  departments: Department[];
-  isOpen: boolean;
-  onOpenChange: (open: boolean) => void;
-}
-
 export default function AddEmployeeDialog({ 
   departments, 
   isOpen, 
   onOpenChange 
-}: AddEmployeeDialogProps) {
+}) {
   return (
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-[525px]">

@@ -4,28 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
-interface Customer {
-  id: number;
-  name: string;
-  email: string;
-  company: string;
-  status: string;
-  value: string;
-  lastContact: string;
-}
-
-interface CustomerDetailProps {
-  customer: Customer;
-}
-
-const getInitials = (name: string) => {
+const getInitials = (name) => {
   return name
     .split(' ')
     .map(part => part.charAt(0).toUpperCase())
     .join('');
 };
 
-export default function CustomerDetail({ customer }: CustomerDetailProps) {
+export default function CustomerDetail({ customer }) {
   return (
     <>
       <CardHeader>

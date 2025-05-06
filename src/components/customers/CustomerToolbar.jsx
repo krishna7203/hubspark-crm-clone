@@ -3,12 +3,7 @@ import { Filter, Plus, Download, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
-interface CustomerToolbarProps {
-  searchTerm: string;
-  setSearchTerm: (value: string) => void;
-}
-
-export default function CustomerToolbar({ searchTerm, setSearchTerm }: CustomerToolbarProps) {
+export default function CustomerToolbar({ searchTerm, setSearchTerm }) {
   return (
     <div className="flex flex-col md:flex-row gap-4 justify-between">
       <div className="relative">

@@ -5,11 +5,11 @@ import CustomerList from "@/components/customers/CustomerList";
 import CustomerDetail from "@/components/customers/CustomerDetail";
 import CustomerEmpty from "@/components/customers/CustomerEmpty";
 import CustomerToolbar from "@/components/customers/CustomerToolbar";
-import { customers, type Customer } from "@/data/customersData";
+import { customers } from "@/data/customersData";
 
 export default function Customers() {
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCustomer, setSelectedCustomer] = useState<Customer | null>(null);
+  const [selectedCustomer, setSelectedCustomer] = useState(null);
 
   return (
     <div className="space-y-6">

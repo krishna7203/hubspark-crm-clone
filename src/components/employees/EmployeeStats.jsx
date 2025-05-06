@@ -1,12 +1,7 @@
 
-import { EmployeeStat } from "@/data/employeesData";
 import { Card, CardContent } from "@/components/ui/card";
 
-interface EmployeeStatsProps {
-  stats: EmployeeStat[];
-}
-
-export default function EmployeeStats({ stats }: EmployeeStatsProps) {
+export default function EmployeeStats({ stats }) {
   return (
     <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
       {stats.map((stat, i) => (
