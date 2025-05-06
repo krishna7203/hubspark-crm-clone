@@ -1,5 +1,5 @@
 
-import { Employee, getInitials } from "@/data/employeesData";
+import { getInitials } from "@/data/employeesData";
 import { Mail, Phone, User } from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
@@ -7,8 +7,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 /**
  * @typedef {Object} EmployeeProfileProps
- * @property {Object|null} selectedEmployee
- * @property {Function} onAddEmployee
+ * @property {Object|null} selectedEmployee - The currently selected employee object
+ * @property {Function} onAddEmployee - Callback function when adding a new employee
  */
 
 /**
