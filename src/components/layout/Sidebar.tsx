@@ -8,7 +8,8 @@ import {
   Users, 
   UserRound, 
   Briefcase, 
-  Settings 
+  Settings,
+  BarChart 
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -51,7 +52,7 @@ export default function Sidebar() {
           expanded ? "opacity-100" : "opacity-0"
         )}>
           <div className="w-8 h-8 rounded-md bg-primary flex items-center justify-center text-white font-bold">
-            CRM
+            <BarChart size={18} />
           </div>
           {expanded && <span className="font-bold">CRM</span>}
         </div>
