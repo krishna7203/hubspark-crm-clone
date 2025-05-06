@@ -5,15 +5,20 @@ import { Button } from "@/components/ui/button";
 import { Department } from "@/data/employeesData";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
-interface EmployeeSearchProps {
-  searchTerm: string;
-  onSearchChange: (value: string) => void;
-  onAddClick: () => void;
-  departments: Department[];
-  selectedDepartment: string;
-  onDepartmentChange: (department: string) => void;
-}
+/**
+ * @typedef {Object} EmployeeSearchProps
+ * @property {string} searchTerm
+ * @property {Function} onSearchChange
+ * @property {Function} onAddClick
+ * @property {Array} departments
+ * @property {string} selectedDepartment
+ * @property {Function} onDepartmentChange
+ */
 
+/**
+ * Employee search component
+ * @param {EmployeeSearchProps} props
+ */
 export default function EmployeeSearch({ 
   searchTerm, 
   onSearchChange, 
@@ -21,7 +26,7 @@ export default function EmployeeSearch({
   departments,
   selectedDepartment,
   onDepartmentChange
-}: EmployeeSearchProps) {
+}) {
   return (
     <div className="flex flex-col md:flex-row gap-4 justify-between">
       <div className="flex flex-col md:flex-row gap-2 md:items-center w-full md:w-auto">

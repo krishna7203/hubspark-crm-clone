@@ -5,12 +5,17 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
-interface EmployeeProfileProps {
-  selectedEmployee: Employee | null;
-  onAddEmployee: () => void;
-}
+/**
+ * @typedef {Object} EmployeeProfileProps
+ * @property {Object|null} selectedEmployee
+ * @property {Function} onAddEmployee
+ */
 
-export default function EmployeeProfile({ selectedEmployee, onAddEmployee }: EmployeeProfileProps) {
+/**
+ * Employee Profile component
+ * @param {EmployeeProfileProps} props 
+ */
+export default function EmployeeProfile({ selectedEmployee, onAddEmployee }) {
   if (!selectedEmployee) {
     return (
       <Card>

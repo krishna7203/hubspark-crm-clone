@@ -22,12 +22,17 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
-interface EmployeeListProps {
-  employees: Employee[];
-  onSelectEmployee: (employee: Employee) => void;
-}
+/**
+ * @typedef {Object} EmployeeListProps
+ * @property {Array} employees - List of employees
+ * @property {Function} onSelectEmployee - Callback when employee is selected
+ */
 
-export default function EmployeeList({ employees, onSelectEmployee }: EmployeeListProps) {
+/**
+ * Employee list component
+ * @param {EmployeeListProps} props
+ */
+export default function EmployeeList({ employees, onSelectEmployee }) {
   return (
     <Card className="lg:col-span-2">
       <CardHeader>
