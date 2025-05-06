@@ -8,7 +8,8 @@ import {
   MoreHorizontal, 
   Star, 
   Mail, 
-  Phone 
+  Phone,
+  Users 
 } from "lucide-react";
 import { 
   Card, 
